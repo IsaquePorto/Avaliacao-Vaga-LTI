@@ -1,0 +1,47 @@
+<h2>Sistema Banco </h2>
+
+
+<button type="button" class="btn btn-info mt-5 mb-2" (click)="getSetence()">Listar contas</button>
+
+
+<table *ngFor="let item of sentence" > 
+
+  <tr>
+    <th>IdConta</th>
+    <th>IdPessoa</th>
+    <th>Saldo</th>
+  </tr>
+
+  <tr>
+    <th>{{ item.idConta }}</th>
+    <th>{{ item.idPessoa }}</th>
+    <th>{{ item.saldo }}</th>
+  </tr>
+
+</table>
+
+
+<button type="button" class="btn btn-info mt-5 mb-2" (click)="getPaginatioExample()">Listar transacoes</button>
+
+<table *ngFor="let transacao of transacoes.data.content" > 
+
+  <tr>
+    <th>IdConta</th>
+    <th>Valor</th>
+    <th>Data</th>
+  </tr>
+
+  <tr>
+    <th>{{ transacao.idConta }}</th>
+    <th>{{ transacao.valor }}</th>
+    <th>{{ transacao.dataTransacao }}</th>
+  </tr>
+
+</table>
+
+<button type="button" class="btn btn-info mt-5 mb-2" (click)="postExample()">Depositar</button>
+
+<button type="button" class="btn btn-info mt-5 mb-2" (click)="postExample()">Sacar</button>
+
+
+
